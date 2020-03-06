@@ -14,6 +14,13 @@
 	<meta name="description" content="Wedding" />
 	<meta name="keywords" content="Wedding" />
 
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
+	<link href="http://allfont.net/allfont.css?fonts=bikham-cyr-script" rel="stylesheet" type="text/css" />
+	<link href="http://allfont.net/allfont.css?fonts=andantino-script" rel="stylesheet" type="text/css" />
+	<link href="http://allfont.net/allfont.css?fonts=annabelle" rel="stylesheet" type="text/css" /> -->
+
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -35,6 +42,60 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<!-- jQuery -->
+	<script src="dist/scripts.min.js"></script>
+
+	<script type="text/javascript">
+		function getParameters() {
+			var searchString = window.location.search.substring(1);
+			var params = searchString.split("&");
+			var hash = {};
+
+			if (searchString == "") return {};
+			for (var i = 0; i < params.length; i++) {
+				var val = params[i].split("=");
+				hash[unescape(val[0])] = unescape(val[1]);
+			}
+
+			return hash;
+		}
+
+		window.guests = {
+			"0": {
+				"a": "Скъпо сем. Радеви,"
+			},
+			"1": {
+				"a": "Скъпи Васил и Бианка,"
+			},
+			"2": {
+				"a": "Скъпи Николай,"
+			},
+			"3": {
+				"a": "Скъпа Мими,"
+			},
+		};
+
+		$(window).load(function () {
+			var param = getParameters();
+			var greeting = "Скъпи гости,";
+			if (typeof param.guest !== "undefined") {
+				if (typeof guests[param.guest] !== "undefined") {
+					greeting = guests[param.guest];
+					// $.cookie("guest", null);
+					// $.cookie("guest", param.guest);
+					// alert(greeting);
+				} else {
+					// var guestFromCookie = $.cookie("guest");
+					// if(typeof guests[guestFromCookie] !== "undefined"){
+					// 	greeting = guests[guestFromCookie];
+					// }
+				}
+			}
+			$("#greeting").text(greeting.a);
+
+		});
+	</script>
+
 </head>
 
 <body>
@@ -50,9 +111,9 @@
 							<div class="container">
 								<div class="col-md-10 col-md-offset-1">
 									<div class="animate-box">
-										<h1>The Wedding</h1>
-										<h2>Milena &amp; Tsvetan</h2>
-										<p><span>28 JUNE 2020</span></p>
+										<h1>Сватбата на</h1>
+										<h2>Милена &amp; Цветан</h2>
+										<p><span>28 ЮНИ 2020</span></p>
 									</div>
 								</div>
 							</div>
@@ -61,23 +122,10 @@
 				</div>
 			</div>
 
-			<header id="fh5co-header-section" class="sticky-banner">
-				<div class="container">
-					<div class="nav-header">
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-						<h1 id="fh5co-logo"><a href="index.html">The Wedding</a></h1>
-						<!-- START #fh5co-menu-wrap -->
-						<nav id="fh5co-menu-wrap" role="navigation">
-							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li>
-									<a href="#fh5co-couple" class="fh5co-sub-ddown">Invitation</a>
-								</li>
-								<li><a href="#fh5co-when-where">When &amp; Where</a></li>
-								<li><a href="#fh5co-started">Questions</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
+
+
+			<header id="fh5co-header-section">
+				<div id="fh5co-countdown"></div>
 			</header>
 
 			<!-- end:header-top -->
@@ -87,32 +135,34 @@
 				<div class="container">
 					<div class="row row-bottom-padded-md animate-box">
 						<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-							<h2>Invitation</h2>
+							<h2>Покана</h2>
 						</div>
 						<div class="col-md-6 col-md-offset-3 text-center">
 							<div class="col-md-5 col-sm-5 col-xs-5 nopadding">
 								<img src="images/bride-edit.png" class="img-responsive" alt="Milena Marinova">
-								<h3>Milena Marinova</h3>
+								<h3>Милена<br />Маринова</h3>
 							</div>
 							<div class="col-md-2 col-sm-2 col-xs-2 nopadding">
 								<h2 class="amp-center"><i class="icon-heart"></i></h2>
 							</div>
 							<div class="col-md-5 col-sm-5 col-xs-5 nopadding">
 								<img src="images/groom-edit.png" class="img-responsive" alt="Tsvetan Gaydev">
-								<h3>Tsvetan Gaydev</h3>
+								<h3>Цветан<br />Гайдев</h3>
 							</div>
 						</div>
 					</div>
 					<div class="row animate-box">
 						<div class="col-md-8 col-md-offset-2">
 							<div class="col-md-12 text-center heading-section">
-								<h2>Are Getting Married</h2>
-								<p><strong>on June 28, 2020 &mdash; Varna, Bulgaria</strong></p>
-								<p><strong>...</strong></p>
-								<p><strong>...</strong></p>
-								<p><strong>...</strong></p>
-								<p><strong>...</strong></p>
-								<p><strong>...</strong></p>
+								<h3 id="greeting">Скъпи гости,</h3>
+								<p>Има само едно щастие в живота – да обичаш и да бъдеш обичан!</p>
+								<p>Бъдете специални гости на най-нежното и най-красиво събитие в нашия живот,
+									което ще се проведе на 28 Юни 2020 г.</p>
+								<p>Нека заедно да превърнем този ден в един незабравим спомен!</p>
+								<h3>С обич: Мили и Цецо</h3>
+								<br/>
+								<br/>
+								<h3>Кумуват: Грета Танева и Стоил Ингилиев</h3>
 							</div>
 						</div>
 					</div>
@@ -132,7 +182,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-							<h2>When &amp; Where</h2>
+							<h2>Кога &amp; Къде</h2>
 						</div>
 					</div>
 					<div class="row row-bottom-padded-md">
@@ -140,18 +190,18 @@
 							<div class="wedding-events">
 								<div class="ceremony-bg" style="background-image: url(images/church.jpg);"></div>
 								<div class="desc">
-									<h3>Wedding Ceremony</h3>
-									<p><strong>Sunday, June 28, 2020, 15.30 - 16:30 @ Dormition of the Mother of God
-											Cathedral, Varna</strong>
+									<h3>Светото Венчание</h3>
+									<p><strong>от 15:45 ч. на 28 Юни 2020 г., катедрала "Успение Богородично", гр.
+											Варна</strong>
 									</p>
-									<p>The Dormition of the Mother of God Cathedral is the largest church building in
-										Varna and the third largest cathedral in Bulgaria. Officially opened since 1886.
+									<p>Катедрала "Успение Богородично" е най-голямата църква в град Варна и третата по
+										големина в България. Официално е отворена през 1886 г.
 									</p>
 								</div>
-								<div class="map-grid" style="margin-top: 5em;">
+								<div class="map-grid" style="margin-top: 1em; margin-bottom: 3em;">
 									<iframe
 										src="https://maps.google.com/maps?q=Dormition%20of%20the%20Theotokos%20Cathedral%2C%20Varna&t=&z=15&ie=UTF8&iwloc=&output=embed"
-										width="500" height="300" frameborder="0" style="border:0"
+										width="450" height="300" frameborder="0" style="border:0"
 										allowfullscreen></iframe>
 								</div>
 							</div>
@@ -160,17 +210,16 @@
 							<div class="wedding-events">
 								<div class="ceremony-bg" style="background-image: url(images/hotel.jpg);"></div>
 								<div class="desc">
-									<h3>Wedding Party</h3>
-									<p><strong>Sunday, June 28, 2020, 18.30 - 06:00 @ INTERNATIONAL, Golden
-											Sands</strong>
-									</p>
-									<p> INTERNATIONAL Hotel Casino & Tower Suites is situated only meters from
-										the beach of Golden Sands, Bulgaria and 17 km from Varna city center.</p>
+									<h3>Сватбеното Тържество</h3>
+									<p><strong>от 18:00 ч. на 28 Юни 2020 г., хотел "Интернационал", к.к. Златни
+											Пясъци</strong></p>
+									<p>хотел и казино "Интернационал" се намира на метри от плажът на к.к. Златни
+										Пясъци. Разстоянието от центъра на град Варна е около 17 км.</p>
 								</div>
-								<div class="map-grid" style="margin-top: 5em;">
+								<div class="map-grid" style="margin-top: 1em; margin-bottom: 3em;">
 									<iframe
 										src="https://maps.google.com/maps?q=Internacional%2C%20Golden%20Sands&t=&z=15&ie=UTF8&iwloc=&output=embed"
-										width="500" height="300" frameborder="0" style="border:0"
+										width="450" height="300" frameborder="0" style="border:0"
 										allowfullscreen></iframe>
 								</div>
 							</div>
@@ -189,8 +238,8 @@
 				<div class="container">
 					<div class="row animate-box">
 						<div class="col-md-8 col-md-offset-2 text-center heading-section">
-							<h2>Any Questions?</h2>
-							<p>Please, just call us. Thanks!</p>
+							<h2>Имате Въпроси?</h2>
+							<p>Моля, потърсете ни. Благодарим предварително!</p>
 							<div class="col-md-6 col-md-offset-3 text-center">
 								<p class="fh5co-social-icons">
 									<a href="tel:0886769686"><i class="icon-phone2"></i></a>
@@ -198,6 +247,9 @@
 									<a href="https://www.facebook.com/milena.marinova.94"><i
 											class="icon-facebook2"></i></a>
 								</p>
+							</div>
+							<div class="col-md-6 col-md-offset-3 text-center">
+								<p>П.С.: Всякакви промени в програмата ще бъдат публикувани в поканата Ви!</p>
 							</div>
 						</div>
 					</div>
@@ -227,8 +279,6 @@
 	<!-- END fh5co-wrapper -->
 
 	</script> -->
-	<!-- jQuery -->
-	<script src="dist/scripts.min.js"></script>
 </body>
 
 </html>

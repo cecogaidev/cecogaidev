@@ -6,6 +6,7 @@
   font-style: normal;
 }
 
+
 /* =======================================================
 *
 * 	Template Style 
@@ -13,9 +14,9 @@
 *
 * ======================================================= */
 body {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Brush Script MT";
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 24px;
   background: #fff;
   color: #848484;
   font-weight: 300;
@@ -45,9 +46,9 @@ p,
 ul,
 ol {
   margin-bottom: 1.5em;
-  font-size: 16px;
+  font-size: 24px;
   color: #848484;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Brush Script MT";
 }
 
 h1,
@@ -57,7 +58,7 @@ h4,
 h5,
 h6 {
   color: #5a5a5a;
-  font-family: "Montez", cursive;
+  font-family: "Brush Script MT";
   font-weight: 400;
   margin: 0 0 30px 0;
 }
@@ -162,7 +163,7 @@ figure {
 .fh5co-cover,
 .fh5co-hero {
   position: relative;
-  height: 800px;
+  height: 1000px;
   width: 100%;
 }
 
@@ -170,7 +171,7 @@ figure {
 
   .fh5co-cover,
   .fh5co-hero {
-    height: 700px;
+    height: 800px;
   }
 }
 
@@ -559,7 +560,7 @@ figure {
 }
 
 #fh5co-couple,
-#fh5co-countdown,
+/* #fh5co-countdown, */
 #fh5co-groom-bride,
 #fh5co-blog-section,
 #fh5co-started,
@@ -567,13 +568,13 @@ figure {
 #fh5co-guest,
 #fh5co-gallery,
 .fh5co-content-section {
-  padding: 7em 0;
+  padding: 5em 0;
 }
 
 @media screen and (max-width: 768px) {
 
   #fh5co-couple,
-  #fh5co-countdown,
+  /* #fh5co-countdown, */
   #fh5co-groom-bride,
   #fh5co-blog-section,
   #fh5co-started,
@@ -581,7 +582,7 @@ figure {
   #fh5co-guest,
   #fh5co-gallery,
   .fh5co-content-section {
-    padding: 4em 0;
+    padding: 3em 0;
   }
 }
 
@@ -613,6 +614,10 @@ figure {
   border-radius: 50%;
 }
 
+#fh5co-couple p {
+  font-size: 28px;
+}
+
 #fh5co-couple h3 {
   font-size: 30px;
 }
@@ -635,27 +640,18 @@ figure {
   }
 }
 
+
 #fh5co-countdown {
   background: #5a8eaf;
+  padding: 3em;
 }
 
-#fh5co-countdown .countdown {
-  margin-bottom: 0;
-  font-size: 80px;
-  color: #fff;
+@media screen and (max-width: 768px) {
+  #fh5co-countdown {
+    padding: 1em;
+  }
 }
 
-#fh5co-countdown .countdown span {
-  margin: 0 30px;
-  display: inline-block;
-  font-family: "Montez", cursive;
-}
-
-#fh5co-countdown .countdown small {
-  display: block;
-  font-size: 16px;
-  font-family: "Open Sans", Arial, sans-serif;
-}
 
 .couple-wrap {
   width: 100%;
@@ -708,7 +704,7 @@ figure {
 }
 
 .wedding-events .desc p strong {
-  font-size: 14px;
+  font-size: 24px;
 }
 
 #fh5co-started {
@@ -804,7 +800,7 @@ figure {
 }
 
 .groom-men h3 {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Brush Script MT";
   font-size: 18px;
 }
 
@@ -895,7 +891,7 @@ figure {
   margin-bottom: 20px;
   font-weight: 300;
   line-height: 1.5;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Brush Script MT";
 }
 
 .fh5co-blog .blog-text h3 a {
