@@ -14,7 +14,7 @@
 *
 * ======================================================= */
 body {
-  font-family: 'Caveat', cursive;
+  font-family: 'Marck Script', cursive;
   line-height: 1.6;
   font-size: 24px;
   background: #fff;
@@ -48,7 +48,7 @@ ol {
   margin-bottom: 1.5em;
   font-size: 24px;
   color: #848484;
-  font-family: 'Caveat', cursive;
+  font-family: 'Marck Script', cursive;
 }
 
 h1,
@@ -58,7 +58,7 @@ h4,
 h5,
 h6 {
   color: #5a5a5a;
-  font-family: 'Caveat', cursive;
+  font-family: 'Marck Script', cursive;
   font-weight: 400;
   margin: 0 0 30px 0;
 }
@@ -800,7 +800,7 @@ figure {
 }
 
 .groom-men h3 {
-  font-family: 'Caveat', cursive;
+  font-family: 'Marck Script', cursive;
   font-size: 18px;
 }
 
@@ -891,7 +891,7 @@ figure {
   margin-bottom: 20px;
   font-weight: 300;
   line-height: 1.5;
-  font-family: 'Caveat', cursive;
+  font-family: 'Marck Script', cursive;
 }
 
 .fh5co-blog .blog-text h3 a {
