@@ -86,7 +86,10 @@
 
 		$(window).load(function () {
 			var param = getParameters();
-			var greeting = "Скъпи гости,";
+			var greeting = {
+				"a": "Скъпи гости,",
+				"b": "Бъдете специални гости"
+			}
 			if (typeof param.guest !== "undefined") {
 				if (typeof guests[param.guest] !== "undefined") {
 					greeting = guests[param.guest];
@@ -101,7 +104,7 @@
 				}
 			}
 			$("#greeting").text(greeting.a);
-			$("#greeting2").text(greeting.b);
+			$("#greeting2").prepend(greeting.b);
 
 		});
 	</script>
@@ -115,7 +118,7 @@
 			<div class="fh5co-hero" data-section="home">
 				<div class="fh5co-overlay"></div>
 				<div class="fh5co-cover text-center" data-stellar-background-ratio="0.3"
-					style="background-image: url(images/dusty-blue/template%209.jpg);">
+					style="background-image: url(images/dusty-blue/template%209-edit.jpg);">
 					<div class="display-t">
 						<div class="display-tc">
 							<div class="container">
@@ -140,7 +143,7 @@
 
 			<!-- end:header-top -->
 
-			<div id="fh5co-couple" style="background-image: url(images/dusty-blue/template%203.jpg);  background-repeat: no-repeat;
+			<div id="fh5co-couple" style="background-image: url(images/dusty-blue/template%203-edit.jpg);  background-repeat: no-repeat;
 				background-attachment: fixed; background-position: center;">
 				<div class="container">
 					<div class="row row-bottom-padded-md animate-box">
@@ -149,14 +152,14 @@
 						</div>
 						<div class="col-md-6 col-md-offset-3 text-center">
 							<div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-								<img src="images/bride-edit.png" class="img-responsive" alt="Milena Marinova">
+								<img src="images/bride-edit2.png" class="img-responsive" alt="Milena Marinova">
 								<h3>Милена<br />Маринова</h3>
 							</div>
 							<div class="col-md-2 col-sm-2 col-xs-2 nopadding">
 								<h2 class="amp-center"><i class="icon-heart"></i></h2>
 							</div>
 							<div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-								<img src="images/groom-edit.png" class="img-responsive" alt="Tsvetan Gaydev">
+								<img src="images/groom-edit2.png" class="img-responsive" alt="Tsvetan Gaydev">
 								<h3>Цветан<br />Гайдев</h3>
 							</div>
 						</div>
@@ -166,8 +169,8 @@
 							<div class="col-md-12 text-center heading-section">
 								<h3 id="greeting">Скъпи гости,</h3>
 								<p>Има само едно щастие в живота – да обичаш и да бъдеш обичан!</p>
-								<p>
-									<div id="greeting2">Бъдете специални гости</div> на най-нежното и най-красиво
+								<p id="greeting2">
+									на най-нежното и най-красиво
 									събитие в нашият живот, което ще се проведе на 28 Юни 2020 г.
 								</p>
 								<p>Програмата ще започне с църковна венчавка от <strong>16:00</strong>ч. в катедрала
@@ -179,7 +182,6 @@
 									завършим с официална вечеря и парти до сутринта.</p>
 								<p>Нека заедно да превърнем този ден в един незабравим спомен!</p>
 								<h3>С обич: Мили и Цецо</h3>
-								<br />
 								<br />
 								<h3>Кумуват: Грета Танева и Стоил Ингилиев</h3>
 							</div>
@@ -195,7 +197,7 @@
 				</div>
 			</div>
 
-			<div id="fh5co-when-where" class="fh5co-section-gray" style="background-image: url(images/dusty-blue/Wreath%205.png);   background-repeat: no-repeat;
+			<div id="fh5co-when-where" class="fh5co-section-gray" style="background-image: url(images/dusty-blue/Wreath%205-edit.png);   background-repeat: no-repeat;
 				background-attachment: fixed;
 				background-position: center; ">
 				<div class="container">
@@ -252,7 +254,7 @@
 				</div>
 			</div>
 
-			<div id="fh5co-started" style="background-image:url(images/dusty-blue/template%202.jpg); background-repeat: no-repeat;
+			<div id="fh5co-started" style="background-image:url(images/dusty-blue/template%202-edit.jpg); background-repeat: no-repeat;
 			background-attachment: fixed; background-position: center;" data-stellar-background-ratio="0.1">
 				<div class="container">
 					<div class="row animate-box">
