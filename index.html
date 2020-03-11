@@ -183,7 +183,8 @@
 			},
 		};
 
-		$(window).load(function () {
+		// $(window).load(function () {
+		$(document).ready(function () {
 			var param = getParameters();
 			var greeting = {
 				"a": "Скъпи гости,",
@@ -199,7 +200,6 @@
 			if (typeof greeting.c !== "undefined") {
 				$("#joke").text(greeting.c);
 			}
-
 		});
 	</script>
 
@@ -309,7 +309,9 @@
 								<div class="ceremony-bg" style="background-image: url(images/church.jpg);"></div>
 								<div class="desc">
 									<h3>Светото Венчание</h3>
-									<p><strong>от 16:00 ч. на 28 Юни 2020 г., катедрален храм <a href="http://www.mitropolia-varna.org/hramove/varna/1028-mitropolitska-katedrala-uspenie-bogorodichno-varna" target="_blank">"Св. Успение Богородично"</a>, гр.
+									<p><strong>от 16:00 ч. на 28 Юни 2020 г., катедрален храм <a
+												href="http://www.mitropolia-varna.org/hramove/varna/1028-mitropolitska-katedrala-uspenie-bogorodichno-varna"
+												target="_blank">"Св. Успение Богородично"</a>, гр.
 											Варна</strong>
 									</p>
 									<p>Катедрален храм "Св. Успение Богородично" е най-голямата църква в град Варна и
@@ -330,8 +332,10 @@
 								<div class="ceremony-bg" style="background-image: url(images/hotel.jpg);"></div>
 								<div class="desc">
 									<h3>Сватбеното Парти</h3>
-									<p><strong>от 18:00 ч. на 28 Юни 2020 г., хотел <a href="http://www.hotelcasinointernational.com/bg" target="_blank">"Интернационал Хотел Казино & Тауър
-										Суитс"</a>, к.к. Златни
+									<p><strong>от 18:00 ч. на 28 Юни 2020 г., хотел <a
+												href="http://www.hotelcasinointernational.com/bg"
+												target="_blank">"Интернационал Хотел Казино & Тауър
+												Суитс"</a>, к.к. Златни
 											пясъци</strong></p>
 									<p>хотел и казино "Интернационал" се намира на метри от плажът на к.к. Златни
 										пясъци. Разстоянието от центъра на град Варна е около 17 км.</p>
